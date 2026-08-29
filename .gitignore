@@ -1,0 +1,34 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment variables / secrets
+.env
+.env.*
+
+# IDE
+.vscode/
+
+# Data
+data/
+*.csv
+
+# Model files
+models/
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.onnx
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
