@@ -52,8 +52,8 @@ def teacher_screen_login():
     st.space()
     st.space()
 
-    teacher_username = st.text_input("Enter username", placeholder='Ananyaroy123')
-    teacher_password = st.text_input("Enter password", type='password', placeholder='Enter your password')
+    teacher_username = st.text_input("Enter username", placeholder='Ananyaroy123', key='login_username')
+    teacher_password = st.text_input("Enter password", type='password', placeholder='Enter your password', key='login_password')
 
     st.divider()
 
@@ -137,6 +137,114 @@ def teacher_screen_register():
             st.rerun()
 
     footer_dashboard()
+
+# def teacher_screen_register():
+
+#     c1, c2 = st.columns(
+#         2,
+#         vertical_alignment="center",
+#         gap="xxlarge"
+#     )
+
+#     with c1:
+#         header_dashboard()
+
+#     with c2:
+#         if st.button(
+#             "Go back to Home",
+#             type="secondary",
+#             key="registerbackbtn",
+#             shortcut="control+backspace"
+#         ):
+#             st.session_state["login_type"] = None
+#             st.rerun()
+
+#     st.header("Register", text_alignment="center")
+
+#     st.space()
+#     st.space()
+
+#     teacher_username = st.text_input(
+#         "Enter username",
+#         placeholder="AnanyaRoy123",
+#         key="register_username"
+#     )
+
+#     teacher_name = st.text_input(
+#         "Enter name",
+#         placeholder="Ananya Roy",
+#         key="register_name"
+#     )
+
+#     teacher_password = st.text_input(
+#         "Enter password",
+#         type="password",
+#         placeholder="Enter your password",
+#         key="register_password"
+#     )
+
+#     teacher_password_confirm = st.text_input(
+#         "Confirm password",
+#         type="password",
+#         placeholder="Confirm your password",
+#         key="register_password_confirm"
+#     )
+
+#     st.divider()
+
+#     btnc1, btnc2 = st.columns(2)
+
+#     with btnc1:
+
+#         if st.button(
+#             "Register now",
+#             icon=":material/passkey:",
+#             shortcut="control+enter",
+#             width="stretch",
+#             key="teacher_register_now_btn"
+#         ):
+
+#             # TEMPORARY DEBUG
+#             st.write("Username:", repr(teacher_username))
+#             st.write("Name:", repr(teacher_name))
+#             st.write("Password:", repr(teacher_password))
+#             st.write(
+#                 "Confirm Password:",
+#                 repr(teacher_password_confirm)
+#             )
+
+#             success, message = register_teacher(
+#                 teacher_username,
+#                 teacher_name,
+#                 teacher_password,
+#                 teacher_password_confirm
+#             )
+
+#             st.write("Success:", success)
+#             st.write("Message:", message)
+
+#             if success:
+
+#                 st.success(message)
+
+#             else:
+
+#                 st.error(message)
+
+#     with btnc2:
+
+#         if st.button(
+#             "Login Instead",
+#             icon=":material/passkey:",
+#             type="primary",
+#             width="stretch",
+#             key="teacher_login_instead_btn"
+#         ):
+
+#             st.session_state.teacher_login_type = "login"
+#             st.rerun()
+
+#     footer_dashboard()
 
 
 
