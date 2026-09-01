@@ -47,7 +47,7 @@ def create_subject(subject_code, name, section, teacher_id):
     return response.data
 
 def get_teacher_subjects(teacher_id):
-    response = supabase.table('subjects').select("*, subject_students(count), attendance_logs(timestamp)").eq("teacher_id", teacher_id).execute()
+    response = supabase.table('subject').select("*, subject_students(count), attendance_logs(timestamp)").eq("teacher_id", teacher_id).execute()
     subjects = response.data
 
 
